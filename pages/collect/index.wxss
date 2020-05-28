@@ -1,0 +1,53 @@
+/* pages/collect/index.wxss */
+
+page{
+  background-color: #eee;
+}
+
+.collect-main{
+  
+}
+.collect-title{
+  /* display: flex; */
+  padding: 30rpx 10rpx;
+}
+.collect-title text{
+  padding: 10rpx 20rpx;
+  border:1px solid #ccc;
+  background-color: #fff;
+  margin-left: 20rpx;
+  font-size: 20rpx;
+}
+
+.collect-title .active{
+  border:1rpx solid var(--themeColor);
+}
+
+.collect-item{
+  background-color: #fff;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.collect-item image{
+  flex: 2;
+  margin-right: 20rpx;
+}
+.collect-item .goods-info{
+  flex: 4;
+  display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+
+}
+.goods-name{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 40rpx;
+}
+.goods-price{
+  color: #f00;
+}

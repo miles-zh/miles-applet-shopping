@@ -1,0 +1,109 @@
+/* pages/goods_detail/index.wxss */
+page{
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+  padding-bottom: 200rpx;
+}
+
+swiper{
+  height: 70vw;
+  background-color: var(--themeColor);
+  text-align: center;
+  padding-top:20rpx;
+}
+swiper image{
+  width: 60%;
+  
+}
+
+.goods-price{
+  padding:19rpx;
+  font-size: 32rpx;
+  color: #f00;
+  font-weight: 600;
+}
+.goods-name-area{
+  display: flex;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid var(--themeColor);
+  padding: 20rpx 0;
+}
+.goods-name-area .goods-name{
+  flex:5;
+  color: #000;
+  font-size: 28rpx;
+  padding: 0 10rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods-collect{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1rpx solid #000;
+  font-size: 20rpx;
+}
+.goods-info-content{
+  padding-bottom: 200rpx;
+}
+.goods-info-title{
+  font-size: 38rpx;
+  color:var(--themeColor);
+  font-weight: 600;
+  padding: 20rpx;
+  border-bottom: 1rpx solid var(--themeColor);
+  margin-bottom: 20rpx;
+}
+.bottom-tools{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background-color: var(--themeColor);
+  width: 100%;
+  height: 90rpx;
+  align-items: center;
+  justify-content: center;
+}
+.tool-item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  color: #fff;
+  position: relative;
+}
+.tool-item button{
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 2;
+  opacity: 0;
+  left: 0;
+  top: 0;
+
+}
+.button-buy,.button-cart{
+  flex: 2;
+  font-weight: 600;
+  padding:10rpx 0;
+}
+.button-cart{
+  background-color: #ffa500;
+  border-bottom-left-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+}
+
+.button-buy{
+  background-color: #f40;
+  border-bottom-right-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  margin-right: 20rpx;
+}
+

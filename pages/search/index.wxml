@@ -1,0 +1,9 @@
+<!--pages/search/index.wxml-->
+<view class="search-input">
+	<input placeholder="请输入搜索内容" bindinput="search" value="{{inputValue}}"></input>
+  <button hidden="{{!isFocus}}" bindtap="hideCancelButton">取消</button>
+</view>
+<scroll-view class="search-content" scroll-y style="height:{{contentHeight}}">
+<navigator class="search-item" wx:for="{{searchResult}}" wx:key="goods_id" url="/pages/goods_detail/index?id={{item.goods_id}}">{{item.goods_name}}</navigator>
+
+</scroll-view> 

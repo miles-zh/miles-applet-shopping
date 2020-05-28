@@ -1,0 +1,66 @@
+<!--pages/cart/index.wxml-->
+<view class="recieve-address-wrap">
+	<!-- 添加收货地址 -->
+	<view class="add-address" wx:if='{{!addressInfo.name}}'>
+		<button type="primary" plain bindtap='addRecieveAddress'>添加收货地址</button>
+	</view>
+	<!-- 显示收货地址 -->
+	<view class="address" wx:else>
+		<view>收货人：{{addressInfo.name}} {{addressInfo.phone}}</view>
+		<view>地址：{{addressInfo.address}}</view>
+	</view>
+</view>
+<view class="cart-content">
+	<view class="cart-title">
+		<view>购物车</view>
+
+		<view style="color:{{operationText === '删除'?'#f40':'#1296db'}}" bindtap="deleteCartList" data-text='{{operationText}}'>{{operationText}}</view>
+	</view>
+	<block wx:if='{{ cartList.length > 0 }}'>
+  <scroll-view class="cart-main" scroll-y="true" style="height:{{contentHeight}}">
+  
+		<view class="cart-item" wx:for="{{cartList}}" wx:key="id">
+			<view class="cart-checkbox">
+				<checkbox-group bindchange='selectedItem' data-id='{{item.id}}'>
+					<checkbox checked="{{item.isSelected}}" bindchange='selectedItem'></checkbox>
+				</checkbox-group>
+			</view>
+			<navigator class="cart-img">
+				<image mode="widthFix" src='{{item.goods_img}}'></image>
+			</navigator>
+			<view class="cart-info">
+				<view class="cart-name">{{item.goods_name}}</view>
+				<view class="goods-price-count">
+					<view class="goods-price">￥{{item.goods_price}}</view>
+					<view class="operation">
+						<view bindtap="decrement" data-id='{{item.id}}'>-</view>
+						<view>{{item.cartCount}}</view>
+						<view bindtap="increment" data-id='{{item.id}}'>+</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+  </block>
+  <block wx:else>
+  <view class="nocartlist" style="height:{{contentHeight}}">
+   <image src="http://hbimg.b0.upaiyun.com/e1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658" mode="widthFix"></image>
+  </view>
+   
+  </block> 
+</view>
+
+<view class="bottom-tools">
+	<view class="check-all" bindtap="checkedAll">
+		<checkbox-group>
+			<checkbox checked="{{isCheckedAll}}">全选</checkbox>
+		</checkbox-group>
+	</view>
+	<view class="total-price">
+		<view class="total">
+			合计： <text>￥{{totalPrice}}</text>
+		</view>
+		<view class="freight">包含运费</view>
+	</view>
+	<view class="settlement" bindtap="goSettle">结算({{totalCount}})</view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/collect/index.wxml-->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange"></Tabs>
+
+<view class="collect-mian">
+	<view class="collect-title">
+		<text class="active">全部</text>
+		<text>正则热卖</text>
+		<text>即将上线</text>
+	</view>
+	<scroll-view scrol-y style="height:{{contentHeight}}">
+		<navigator class="collect-item" wx:for="{{collectList}}" wx:key="{{item.id}}" url='/pages/goods_detail/index?id={{item.id}}'>
+
+			<image src="{{item.pics[0].pics_mid}}" mode="widthFix"></image>
+			<view class="goods-info">
+				<view class="goods-name">{{item.goods_name}}</view>
+				<view class="goods-price">￥{{item.goods_price}}</view>
+
+			</view>
+		</navigator>
+
+	</scroll-view>
+</view>

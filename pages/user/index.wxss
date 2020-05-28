@@ -1,0 +1,144 @@
+/* pages/user/index.wxss */
+page{
+  background-color: #eee;
+}
+
+.user-info-wrap{
+  height: 45vh;
+  
+}
+.user-info-bgi{
+  height: 100%;
+ width: 100%;
+ position: relative;
+ 
+}
+.user-info-bgi>image{
+  height: 100%;
+  width: 100%;
+  filter: blur(7rpx);
+  position: absolute;
+  z-index: -1;
+}
+.user-info{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* z-index: 999; */
+}
+.user-info>image{
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 50%;
+  border:1rpx solid #fff;
+}
+.user-info view{
+  color: #fff;
+  margin-top: 40rpx;
+  font-size: 35rpx;
+}
+.user-button{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--themeColor);
+}
+.user-button navigator{
+  font-size: 40rpx;
+  width: 30%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1rpx solid #fff;
+  color: #fff;
+}
+.user-content{
+  position: relative;
+  display: flex;
+  justify-content: center;
+ 
+}
+.user-main{
+  position: absolute;
+  width: 95%;
+  top:-40rpx;
+  padding-bottom: 100rpx;
+}
+.history-wrap{
+  background-color: #fff;
+  display: flex;
+  padding:20rpx 8rpx;
+}
+.history-item{
+  flex: 1;
+  text-align: center;
+  font-size: 25rpx;
+}
+.history-item view:first-child{
+  color: #f40;
+  margin-bottom: 10rpx;
+}
+
+
+.orders-row{
+  background-color: #fff;
+  margin-top:20rpx;
+}
+.orders-title{
+  padding:20rpx 10rpx;
+  border-bottom: 1rpx solid #ccc;
+  
+}
+.orders-content{
+  display: flex;
+  padding:20rpx 10rpx;
+}
+.orders-content navigator{
+  flex: 1;
+  text-align: center;
+}
+
+.orders-content navigator view:first-child{
+  color: #f40;
+  font-size: 45rpx;
+}
+.orders-content navigator view:last-child{
+  font-size: 25rpx;
+  margin-top: 10rpx;
+}
+.address{
+  background-color: #fff;
+  margin-top: 30rpx;
+  padding: 20rpx 10rpx;
+}
+
+.app-info-wrap{
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.app-info-item{
+  padding: 20rpx 10rpx;
+  display: flex;
+  border-bottom: 1rpx solid #ccc;
+}
+.app-info-item text:first-child{
+  flex: 1;
+}
+
+.app-info-item:nth-of-type(3){
+  border:none;
+}
+
+.recommend-wrap{
+  padding: 20rpx 10rpx;
+  margin-top: 30rpx;
+  background-color: #fff;
+}

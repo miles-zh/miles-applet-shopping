@@ -1,0 +1,91 @@
+/* pages/feedback/index.wxss */
+
+page{
+  background-color: #ccc;
+}
+
+.feedback-title{
+  padding: 20rpx 10rpx;
+  font-size: 30rpx;
+}
+.feedback-tips{
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+.feedback-tips text{
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  width: 30%;
+  text-align: center;
+}
+.feedback-content{
+  background-color: #fff;
+  margin: 30rpx auto 30rpx;
+  width: 95%;
+  padding:20rpx;
+}
+.feedback-tool{
+  display: flex;
+  
+  align-items: center;
+  flex-wrap: wrap;
+}
+.feedback-tool button{
+  height: 80rpx !important;
+  width: 80rpx !important;
+  font-size: 50rpx;
+  
+  line-height: 80rpx;
+  color: #999;
+  text-align: center;
+  padding: 0;
+  margin-top: 20rpx  !important;
+  margin-right: 33rpx  !important;
+  margin-left: 0  !important;
+  margin-bottom: 0  !important;
+}
+.feedback-tool .img{
+  height: 80rpx;
+  width: 80rpx;
+  position: relative;
+  margin-right: 33rpx;
+  margin-top: 20rpx;
+  border:1rpx solid #999;
+}
+
+.feedback-tool .img view{
+  position: absolute;
+  right: -30rpx;
+  top:-30rpx;
+  height: 50rpx;
+  width: 50rpx;
+  color: #fff;
+  background-color: #f40;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 20rpx;
+  border-radius: 50%;
+}
+.feedback-tool .img image{
+  height: 100%;
+  width: 100%;
+}
+
+.feedback-button{
+ display: flex;
+ justify-content: flex-end;
+  padding-right: 20rpx;
+}
+.feedback-button button{
+  height: 80rpx !important;
+  width: 160rpx !important;
+  margin:0 !important;
+  padding: 0;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #f40 !important;
+  color: #fff !important;
+}

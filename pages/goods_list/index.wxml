@@ -1,0 +1,20 @@
+<!--pages/goods_list/index.wxml-->
+<SearchInput></SearchInput>
+<Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange">
+	<block wx:if="{{tabs[0].isActive}}">
+		<view class="first-tab">
+			<navigator class="goods-item" wx:for="{{goodsList}}" wx:key="goods_id" url="/pages/goods_detail/index?id={{item.goods_id}}">
+				<view class="goods-img-wrap">
+					<image src="{{item.goods_small_logo ||  'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589121815128&di=ddfc74e3b43e20f2725bf07038083f34&imgtype=0&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fbaike%2Fpic%2Fitem%2F6a63f6246b600c33d5a41de31b4c510fd9f9a138.jpg'}}" mode="widthFix"></image>
+				</view>
+				<view class="goods-info-wrap">
+					<view class="goods-name">{{item.goods_name}}</view>
+					<view class="goods-price">￥{{item.goods_price}}</view>
+				</view>
+			</navigator>
+     
+		</view>
+	</block>
+	<block wx:elif="{{tabs[1].isActive}}">1</block>
+	<block wx:else>2</block>
+</Tabs>

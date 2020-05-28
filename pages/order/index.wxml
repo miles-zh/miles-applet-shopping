@@ -1,0 +1,20 @@
+<!--pages/order/index.wxml-->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange"></Tabs>
+<scroll-view scroll-y class="order-mian" style="height:{{contentHeight}}">
+  <view class="order-item" wx:for="{{orders}}" wx:key='order_id'>
+    <view class="order-number-row">
+    <view>订单编号</view>
+      <view>{{item.order_number}}</view>
+
+    </view>
+    <view class="order-price-row">
+      <view>订单价格</view>
+      <view>￥{{item.order_price}}</view>
+    </view>
+    <view class="order-date-row">
+      <view>订单日期</view>
+      <view>{{item.create_time}}</view>
+    </view>
+  </view>
+  
+</scroll-view>

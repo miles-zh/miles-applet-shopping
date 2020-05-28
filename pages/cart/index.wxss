@@ -1,0 +1,158 @@
+/* pages/cart/index.wxss */
+
+page{
+
+  padding-bottom: 90rpx;
+}
+
+.recieve-address-wrap{
+  border-bottom: 1rpx solid var(--themeColor);
+}
+.recieve-address-wrap .add-address{
+  padding:20rpx;
+  
+}
+.recieve-address-wrap .add-address button{
+  width: 60%;
+  border-color: var(--themeColor) !important;
+  color: var(--themeColor) !important;
+}
+
+.recieve-address-wrap .address{
+  padding: 20rpx;
+  height: 136rpx;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.recieve-address-wrap .address view:nth-child(2){
+  margin-top:10rpx;
+}
+
+.nocartlist{
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-content{}
+.cart-title{
+  padding: 20rpx;
+  font-size: 36rpx;
+  border-bottom: 1rpx solid var(--themeColor);
+  color: var(--themeColor);
+  font-weight: 600;
+  display: flex;
+  
+}
+
+.cart-title view:first-child{
+  flex: 1;
+}
+
+.cart-main{
+}
+.cart-item{
+  display: flex;
+  padding: 40rpx 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.cart-checkbox{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-img{
+  flex:2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-img image{
+  width: 80%;
+}
+.cart-info{
+  flex:4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart-name{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods-price-count{
+  display: flex;
+  align-items: center;
+  margin-top:20rpx;
+}
+.goods-price{
+  flex: 2;
+  font-size: 24rpx;
+  color: #f00;
+}
+.operation{
+  flex: 2;
+  display: flex;
+}
+.operation view{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.operation view:nth-of-type(odd){
+  width: 50rpx;
+  height: 50rpx;
+  border:1rpx solid var(--themeColor);
+  color: var(--themeColor);
+}
+.operation view:nth-of-type(even){
+  flex: 1;
+}
+
+.bottom-tools{
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 1rpx solid #ddd;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  
+}
+.check-all{
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.total-price{
+  flex: 4;
+  text-align: right;
+  padding-right: 20rpx;
+}
+.total-price .total{
+  color: #f00;
+}
+.total-price .freight{
+
+}
+.settlement{
+  flex: 2;
+  background-color: #f40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0 20rpx;
+  padding:15rpx 0;
+  border-radius: 40rpx;
+  color: #fff;
+  font-weight: 600;
+}
+
+

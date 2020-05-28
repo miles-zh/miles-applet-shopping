@@ -1,0 +1,15 @@
+/* components/SearchInput.wxss */
+.search-input{
+  background-color: var(--themeColor);
+  height: 90rpx;
+  padding: 10rpx;
+}
+/* 组件内不能使用标签选择器 */
+.navigator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 100%;
+  color: #666;
+}

@@ -1,0 +1,7 @@
+/* pages/login/index.wxss */
+button{
+  width: 70%;
+  margin-top: 40rpx;
+  border-color: var(--themeColor) !important;
+  color: var(--themeColor) !important;
+}

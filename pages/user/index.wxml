@@ -1,0 +1,81 @@
+<!--pages/user/index.wxml-->
+
+<view class="user-info-wrap">
+	<view class="user-info-bgi" wx:if="{{userInfo.avatarUrl}}">
+		<image src="{{userInfo.avatarUrl}}"></image>
+		<view class="user-info">
+			<image src="{{userInfo.avatarUrl}}"></image>
+			<view>
+				{{userInfo.nickName}}
+			</view>
+		</view>
+	</view>
+	<view class="user-button" wx:else>
+		<navigator url="/pages/login/index">登录</navigator>
+	</view>
+
+</view>
+<view class="user-content">
+	<view class="user-main">
+		<view class="history-wrap">
+			<navigator class="history-item">
+				<view>0</view>
+				<view>收藏的店铺</view>
+			</navigator>
+      <navigator class="history-item" url='/pages/collect/index'>
+				<view>{{collectedCount}}</view>
+				<view>收藏的商品</view>
+			</navigator>
+      <navigator class="history-item">
+				<view>0</view>
+				<view>关注的商品</view>
+			</navigator>
+      <navigator class="history-item">
+				<view>0</view>
+				<view>我的足迹</view>
+			</navigator>
+		</view>
+    <view class="orders-row">
+      <view class="orders-title">
+      我的订单
+      </view>
+      <view class="orders-content">
+        <navigator url="/pages/order/index?type=1">
+          <view class="iconfont icon-order"></view>
+          <view>全部订单</view>
+        </navigator>
+        <navigator url="/pages/order/index?type=2">
+          <view class="iconfont icon-fukuantongzhi"></view>
+          <view>待付款</view>
+        </navigator>
+        <navigator  url="/pages/order/index?type=3">
+          <view class="iconfont icon-receipt-address"></view>
+          <view>待发货</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+          <view>退款 / 退货</view>
+        </navigator>
+      </view>
+    </view>
+		<view class="address">
+		收货地址管理
+		</view>
+		<view class="app-info-wrap">
+			<view class="app-info-item">
+				<text>联系客服</text>
+				<view>400-200-4000</view>
+			</view>
+			<navigator class="app-info-item" url="/pages/feedback/index">
+				<text>意见反馈</text></navigator> 
+				
+			
+			<view class="app-info-item">
+				<text>关于我们</text>
+				
+			</view>
+		
+		</view>
+		<view class="recommend-wrap">把应用推荐给其他人</view>
+	</view>
+</view>

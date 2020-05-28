@@ -1,0 +1,48 @@
+/* pages/search/index.wxss */
+page{
+  background-color: #eee;
+}
+.search-input{
+  background-color: var(--themeColor);
+  height: 90rpx;
+  padding: 10rpx;
+  display: flex;
+}
+/* 组件内不能使用标签选择器 */
+.search-input input{
+  flex: 1;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+}
+.search-input button{
+  width: 100rpx !important;
+  height: 100%;
+  background-color: #fff;
+  font-size: 23rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #555;
+  margin-left: 15rpx;
+}
+.search-content{
+ 
+  margin-top: 30rpx;
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+  /* align-items: center; */
+}
+.search-item{
+  padding:20rpx 10rpx ;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ccc;
+  width: 95%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin:0 auto;
+}
